@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css.css" />
+    <title>Self Study</title>
+  </head>
+  <body>
+    <table>
+      <th class="titlehead" colspan="5">Lina's Material Calculator</th>
+      <tr>
+        <th class="titlehead" colspan="5">
+          <select name="rarity" id="rarity">
+            <option value="Epic">Rare to Epic</option>
+            <option value="Legendary">Epic to Legendary</option>
+          </select>
+        </th>
+      </tr>
+      <tr>
+        <th>Material</th>
+        <th>Quantity</th>
+        <th>Glitter</th>
+        <th>Dark Steel</th>
+        <th>Copper</th>
+      </tr>
+      <tr>
+        <td>
+          <select name="" id="">
+            <option value="Steel">Steel</option>
+            <option value="Platinum">Platinum</option>
+          </select>
+        </td>
+        <td>
+          <input
+            class="quantity1"
+            type="number"
+            pattern="[0-9]*"
+            value=""
+            placeholder="typehere"
+            onkeypress="preventNonNumericalInput(event)"
+          />
+        </td>
+        <td><span class="glitter1">0</span></td>
+        <td><span class="darksteel1">0</span></td>
+        <td><span class="copper1">0</span></td>
+      </tr>
+      <tr>
+        <td>
+          <select name="" id="">
+            <option value="Steel">Exorcism Bauble</option>
+            <option value="Platinum">Moon Shadow Stone</option>
+            <option value="Platinum">Anima Stone</option>
+          </select>
+        </td>
+        <td>
+          <input
+            class="quantity2"
+            type="number"
+            pattern="[0-9]*"
+            value=""
+            placeholder="typehere"
+            onkeypress="preventNonNumericalInput(event)"
+          />
+        </td>
+        <td><span class="glitter2">0</span></td>
+        <td><span class="darksteel2">0</span></td>
+        <td><span class="copper2">0</span></td>
+      </tr>
+      <tr>
+        <td>
+          <select name="" id="">
+            <option value="Steel">Evil Minded Orb</option>
+            <option value="Platinum">Quintessence</option>
+            <option value="Platinum">Illuminating Fragment</option>
+          </select>
+        </td>
+        <td>
+          <input
+            class="quantity3"
+            type="number"
+            pattern="[0-9]*"
+            value=""
+            placeholder="type here"
+            onkeypress="preventNonNumericalInput(event)"
+          />
+        </td>
+        <td><span class="glitter3">0</span></td>
+        <td><span class="darksteel3">0</span></td>
+        <td><span class="copper3">0</span></td>
+      </tr>
+      <tr>
+        <td style="font-size: 30px">Total</td>
+        <td></td>
+        <td style="font-size: 30px; color: rgb(0, 255, 64)">
+          <span class="totalglitter">0</span>
+        </td>
+        <td style="font-size: 30px; color: rgba(0, 255, 64)">
+          <span class="totaldarksteel">0</span>
+        </td>
+        <td style="font-size: 30px; color: rgba(0, 255, 64)">
+          <span class="totalcopper">0</span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5">
+          <button type="submit" class="compute" id="compute">Calculate</button>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <br />
+  </body>
+  <script src="javascript/js.js"></script>
+</html>
