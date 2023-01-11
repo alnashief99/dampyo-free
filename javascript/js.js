@@ -6,8 +6,6 @@ function preventNonNumericalInput(e) {
   if (!charStr.match(/^[0-9]+$/)) e.preventDefault();
 }
 
-let rarity = document.querySelector("#rarity");
-let rarity1 = rarity.options[rarity.selectedIndex].value;
 let quantity1 = document.querySelector(".quantity1");
 let quantity11 = Number(quantity1.value);
 let glitter1 = document.querySelector(".glitter1");
@@ -26,57 +24,36 @@ let glitter3 = document.querySelector(".glitter3");
 let darkstee33 = document.querySelector(".darksteel3");
 let copper3 = document.querySelector(".copper3");
 
-rarity.addEventListener("change", function () {
-  location.reload();
-});
-
-if (rarity1 == "Epic") {
-  document.querySelector("#compute").addEventListener("click", function () {
+document.querySelector("#compute").addEventListener("click", function () {
+  let rarity1 = document.querySelector("#rarity").value;
+  if (rarity1 == "Epic") {
     quantity11 = Number(quantity1.value);
     glitter1.innerHTML = quantity11 * 25;
     copper1.innerHTML = quantity11 * 20000;
     darksteel1.innerHTML = quantity11 * 5000;
-  });
-} else if (rarity1 == "Legendary") {
-  document.querySelector("#compute").addEventListener("click", function () {
-    quantity11 = Number(quantity1.value);
-    glitter1.innerHTML = quantity11 * 125;
-    copper1.innerHTML = quantity11 * 100000;
-    darksteel1.innerHTML = quantity11 * 25000;
-  });
-}
-
-if (rarity1 == "Epic") {
-  document.querySelector("#compute").addEventListener("click", function () {
     quantity22 = Number(quantity2.value);
     glitter2.innerHTML = quantity22 * 25;
     copper2.innerHTML = quantity22 * 20000;
     darkstee22.innerHTML = quantity22 * 5000;
-  });
-} else if (rarity1 == "Legendary") {
-  document.querySelector("#compute").addEventListener("click", function () {
-    quantity22 = Number(quantity2.value);
-    glitter2.innerHTML = quantity22 * 125;
-    copper2.innerHTML = quantity22 * 100000;
-    darkstee22.innerHTML = quantity22 * 25000;
-  });
-}
-
-if (rarity1 == "Epic") {
-  document.querySelector("#compute").addEventListener("click", function () {
     quantity33 = Number(quantity3.value);
     glitter3.innerHTML = quantity33 * 25;
     copper3.innerHTML = quantity33 * 20000;
     darkstee33.innerHTML = quantity33 * 5000;
-  });
-} else if (rarity1 == "Legendary") {
-  document.querySelector("#compute").addEventListener("click", function () {
+  } else if (rarity1 == "Legendary") {
+    quantity11 = Number(quantity1.value);
+    glitter1.innerHTML = quantity11 * 125;
+    copper1.innerHTML = quantity11 * 100000;
+    darksteel1.innerHTML = quantity11 * 25000;
+    quantity22 = Number(quantity2.value);
+    glitter2.innerHTML = quantity22 * 125;
+    copper2.innerHTML = quantity22 * 100000;
+    darkstee22.innerHTML = quantity22 * 25000;
     quantity33 = Number(quantity3.value);
     glitter3.innerHTML = quantity33 * 125;
     copper3.innerHTML = quantity33 * 100000;
     darkstee33.innerHTML = quantity33 * 25000;
-  });
-}
+  }
+});
 
 let totalGlitter = document.querySelector(".totalglitter").innerHTML;
 let totalDarksteel = document.querySelector(".totaldarksteel").innerHTML;
